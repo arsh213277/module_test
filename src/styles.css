@@ -1,0 +1,67 @@
+/* src/styles.css */
+
+/* Container for home page */
+.home-page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 16px; /* Space between cards */
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* Style for individual post cards */
+.post-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 8px; /* Reduced padding for smaller cards */
+    box-sizing: border-box;
+    background-color: #fff; /* White background for better readability */
+}
+
+/* Make images responsive and fit within the card */
+.post-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Style for the title of the post */
+.post-card h2 {
+    font-size: 1.2em; /* Slightly smaller font size */
+    margin: 8px 0; /* Margin for spacing */
+}
+
+/* Style for the description of the post */
+.post-card p {
+    font-size: 0.9em; /* Slightly smaller font size */
+    margin: 0;
+}
+
+/* Style for the read more link */
+.post-card a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1024px) {
+    .home-page {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-page {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+}
